@@ -1,0 +1,60 @@
+.border {
+  border-bottom: 1px solid #5e685c;
+}
+
+.card {
+  width: 100%;
+  overflow: hidden;
+}
+
+.carousel-container {
+  padding: 20px 10px;
+}
+
+.card-container {
+  width: max-content;
+  display: flex;
+  justify-content: center;
+  gap: 70px;
+  animation: scroll-left 60s linear infinite;
+}
+
+.svg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 24px;
+  width: 200px;
+  border: 1px solid #6c6c6c;
+  border-radius: 10px;
+  box-shadow: 0 10px 15px rgb(0, 0, 0, 0.3);
+}
+
+.svg img {
+  width: 48px;
+  height: 48px;
+  margin-right: 20px;
+  object-fit: contain;
+  opacity: 0.8;
+  box-shadow: 0 10px 15px rgb(0, 0, 0, 0.3);
+  transition:
+    transform 0.3s ease,
+    filter 0.3s ease,
+    opacity 0.3s ease;
+}
+
+.svg img:hover {
+  filter: grayscale(0);
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+/* infinite scroll */
+@keyframes scroll-left {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}

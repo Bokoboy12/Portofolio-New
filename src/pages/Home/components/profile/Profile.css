@@ -1,0 +1,106 @@
+.section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 30vh;
+}
+
+.container {
+  display: flex;
+  width: 80%;
+  padding: 150px 0 50px;
+  gap: 50px;
+}
+
+.profile-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.frame {
+  width: 250px;
+  height: 350px;
+  overflow: hidden;
+  border-radius: 200px;
+  box-shadow: 0 20px 35px rgb(0, 0, 0, 0.8);
+  border: 1px solid rgb(128, 128, 128);
+}
+
+.frame img {
+  width: 100%;
+  height: 100%;
+}
+
+.profile-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.profile-info h1 {
+  font-size: 45px;
+  font-weight: 800;
+  background-clip: text;
+  margin-bottom: 5px;
+}
+
+.profile-info h2 {
+  font-size: 20px;
+  font-weight: 600;
+  background-clip: text;
+  margin-bottom: 5px;
+}
+
+.profile-info p {
+  font-size: 18px;
+  line-height: 1.4;
+}
+
+.profile-links {
+  display: flex;
+  margin-top: 20px;
+  gap: 20px;
+}
+
+.profile-links a {
+  font-size: 13px;
+  text-decoration: none;
+  color: white;
+  font-weight: 600;
+}
+
+.cv-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 150px;
+  height: 40px;
+  cursor: pointer;
+  background-color: #3b82f6;
+  border: 1px solid #6c6c6c;
+  border-radius: 5px;
+  box-shadow: 0 10px 15px rgb(0, 0, 0, 0.8);
+}
+
+.git-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 150px;
+  height: 40px;
+  cursor: pointer;
+  background-color: #f63bbb;
+  border: 1px solid #6c6c6c;
+  border-radius: 5px;
+  box-shadow: 0 10px 15px rgb(0, 0, 0, 0.8);
+}
+
+.cv-btn:hover {
+  background-color: #0062ff;
+}
+
+.git-btn:hover {
+  background-color: #ff00ae;
+}
