@@ -3,7 +3,7 @@ import heroImage from "./img/boy1.jpg";
 import pradaImage from "./img/V1.webp";
 import aboutImage from "./img/about-me.webp";
 import homeImage from "./img/Home.webp";
-import manfaatmage from "./img/manfaat.webp";
+import manfaatImage from "./img/Manfaat.webp";
 import typeImage from "./img/type.webp";
 import contactImage from "./img/contact.webp";    
 import sgh1Image from "./img/SGH1.webp";
@@ -16,7 +16,7 @@ const Image = {
   aboutImage,
   pradaImage,
   homeImage,
-  manfaatmage,
+  manfaatImage,
   typeImage,
   contactImage,
   sgh1Image,

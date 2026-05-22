@@ -53,7 +53,7 @@ function Project() {
           images={[
             dataImage.homeImage,
             dataImage.typeImage,
-            dataImage.manfaatmage,
+            dataImage.manfaatImage,
             dataImage.contactImage,
           ]}
           title="Prada Seven Website"
