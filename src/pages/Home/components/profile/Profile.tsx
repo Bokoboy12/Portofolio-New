@@ -1,11 +1,21 @@
 // import svg and svg
+import { useRef } from "react";
+import { useIntersectionObserver } from "../../hooks/useIntersectionObserver";
 import dataImage from "../../../../assets/image";
 import "./Profile.css";
 
 function Profile() {
+  const skillRef = useRef<HTMLDivElement | null>(null);
+
+  useIntersectionObserver({
+    ref: skillRef,
+    threshold: 0.3,
+    className: "show",
+  });
+
   return (
     <section id="profile" className="section">
-      <div className="container">
+      <div className="container" ref={skillRef}>
         <div className="profile-container">
           <div className="frame">
             <img srcSet={dataImage.heroImage} alt="Profile" />
@@ -26,10 +36,15 @@ function Profile() {
 
           <div className="profile-links">
             <a href="/CV.pdf" download className="cv-btn">
-              Download Resume
+              Download CV
             </a>
 
-            <a href="/CV.pdf" download className="git-btn">
+            <a
+              href="https://github.com/Bokoboy12"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="git-btn"
+            >
               My Github
             </a>
           </div>

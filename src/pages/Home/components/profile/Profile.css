@@ -10,6 +10,15 @@
   width: 80%;
   padding: 150px 0 50px;
   gap: 50px;
+  opacity: 0;
+  transform: translateY(50%);
+  transition: all 0.8 ease-out;
+  overflow: hidden;
+}
+
+.container.show {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .profile-container {
@@ -103,4 +112,28 @@
 
 .git-btn:hover {
   background-color: #ff00ae;
+}
+
+@media (max-width: 800px) {
+  .container {
+    width: 90%;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .profile-info h1 {
+    font-size: 35px;
+  }
+
+  .profile-info h2 {
+    font-size: 20px;
+  }
+
+  .profile-info p {
+    font-size: 16px;
+  }
+
+  .profile-links {
+    justify-content: center;
+  }
 }

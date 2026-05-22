@@ -1,7 +1,17 @@
 .project {
   width: 80%;
-  margin-bottom: 100px;
+  margin: 20px auto 100px;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.8s ease-out;
+  overflow: hidden;
 }
+
+.project.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 .project h1 {
   display: flex;
   justify-content: center;
@@ -45,26 +55,28 @@
 
 .project-info h2 {
   font-size: 1.4rem;
-  margin: 0;
+  margin: 3px;
   color: #fff;
 }
 
 .project-meta {
   display: flex;
-  gap: 1rem;
+  flex-direction: column;
+  align-items: start;
+  gap: 0.7rem;
   font-size: 0.9rem;
   color: #aaa;
 }
 
 .project-meta span {
-  padding: 0.2rem 0.6rem;
+  padding: 0.2rem 0.2rem;
   border-radius: 999px;
   background: rgba(255, 255, 255, 0.08);
 }
 
 .project-card button {
   padding: 0.6rem 1.2rem;
-  border-radius: 8px;
+  border-radius: 10px;
   border: none;
   background: #3b82f6;
   color: #fff;
@@ -86,4 +98,28 @@
 
 .project-card button:hover {
   background: #0062ff;
+}
+
+@media (max-width: 1000px) {
+  .project-card {
+    display: flex;
+    flex-direction: column;
+    align-content: start;
+  }
+
+  .project-card img {
+    width: 100%;
+  }
+
+  .project-card button {
+    width: 100%;
+  }
+
+  .project-info {
+    align-self: flex-start;
+  }
+
+  .project h1 {
+    font-size: 24px;
+  }
 }

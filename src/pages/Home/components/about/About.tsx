@@ -1,4 +1,6 @@
 import { useState } from "react";
+import { useRef } from "react";
+import { useIntersectionObserver } from "../../hooks/useIntersectionObserver";
 
 // data image
 import dataImage from "../../../../assets/image";
@@ -7,9 +9,16 @@ import "./About.css";
 function About() {
   const [expanded, setExpanded] = useState(false);
 
+  const skillRef = useRef<HTMLDivElement | null>(null);
+  useIntersectionObserver({
+    ref: skillRef,
+    threshold: 0.3,
+    className: "show",
+  });
+
   return (
-    <section className="section">
-      <div className="about">
+    <section className="section" id="about">
+      <div className="about" ref={skillRef}>
         <h1>About Me</h1>
         <div className="about-container">
           <div className="about-me-wrapper">

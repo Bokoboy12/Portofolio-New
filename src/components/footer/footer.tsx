@@ -1,9 +1,20 @@
+import { useRef } from "react";
+import { useIntersectionObserver } from "../../pages/Home/hooks/useIntersectionObserver";
+
 import "./footer.css";
 
 function Footer() {
+  const skillRef = useRef<HTMLDivElement | null>(null);
+
+  useIntersectionObserver({
+    ref: skillRef,
+    threshold: 0.3,
+    className: "show",
+  });
+
   return (
     <section className="section">
-      <footer className="footer">
+      <footer className="footer" ref={skillRef}>
         <div className="footer-content">
           <h2>Get in Touch</h2>
           <p>For business and partnership inquiry please contact me below!</p>
@@ -21,7 +32,7 @@ function Footer() {
               <span className="icon">✉️</span>
               <div>
                 <small>Email</small>
-                <strong>boykeadam08@gmail.com</strong>
+                <strong>boykeadam09@gmail.com</strong>
               </div>
             </li>
 
@@ -29,10 +40,7 @@ function Footer() {
               <span className="icon">📍</span>
               <div>
                 <small>Address</small>
-                <strong>
-                  Jl. Pasirluyu Sel. No.133, RT.9/RW.3, Pasirluyu, Kec. Regol,
-                  Kota Bandung, Jawa Barat 40254
-                </strong>
+                <strong>Kota Bandung, Jawa Barat</strong>
               </div>
             </li>
           </ul>

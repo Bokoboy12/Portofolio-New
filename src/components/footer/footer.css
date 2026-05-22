@@ -5,7 +5,15 @@
   color: #fff;
   border-top: 1px solid #6c6c6c;
   overflow: hidden;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.8s ease-out;
   background: rgb(0, 0, 0);
+}
+
+.footer {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .footer-content {

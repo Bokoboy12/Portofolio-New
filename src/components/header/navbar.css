@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   font-family: "Poppins", sans-serif;
+  overflow-x: hidden;
 }
 
 .navbar {
@@ -30,14 +31,40 @@
 .nav-links {
   flex: 2;
   text-align: right;
-  right: -200px;
+  left: -200px;
   top: 0;
   width: 200px;
-  transition: right 0.3s ease;
+  transform: translateX(0);
+  transition: transform 0.35s ease;
 }
 
 .nav-links.show {
-  right: 0;
+  transform: translateX(100%);
+}
+
+.fa-open {
+  display: none;
+}
+
+.fa-close {
+  display: none;
+}
+
+.sidebar-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.35s ease;
+
+  z-index: 1000;
+}
+
+.sidebar-overlay.show {
+  opacity: 1;
+  pointer-events: auto;
 }
 
 .nav-links ul li {
@@ -55,5 +82,51 @@
 }
 
 .nav-links ul li a:hover {
-  color: #3B82F6;
+  color: #3b82f6;
+}
+
+@media (max-width: 800px) {
+  .nav-links ul li {
+    display: block;
+    padding: 20px;
+  }
+
+  .nav-links {
+    position: fixed;
+    background: #0f0f0f;
+    height: 100%;
+    width: 200px;
+    top: 0px;
+    left: -200px;
+    text-align: left;
+    z-index: 2;
+    transition: right 0.3s ease;
+  }
+
+  .fa-open {
+    display: flex;
+    padding: 16px 0 0 12px;
+    color: #ffffff;
+    margin: 10px;
+    font-size: 20px;
+    cursor: pointer;
+  }
+
+  .fa-close {
+    display: flex;
+    color: #ffffff;
+    margin: 10px;
+    font-size: 20px;
+    cursor: pointer;
+  }
+
+  .nav-links ul li::after {
+    content: "";
+    width: 0%;
+    height: 2px;
+    background: #3b82f6;
+    display: block;
+    margin: 0px;
+    transition: 0.5s;
+  }
 }

@@ -1,11 +1,11 @@
 import { Navbar, Footer } from "../../components";
 import { Profile, CardList, About, Project } from "./index";
-import GalaxyBackground from "../../components/galaxy-bg/GalaxyBackground";
+import ScrollToTop from "./utils/ScrollToTop";
 
 function HomePage() {
   return (
     <div>
-      <GalaxyBackground />
+      <ScrollToTop />
       <Navbar />
       <Profile />
       <CardList />
